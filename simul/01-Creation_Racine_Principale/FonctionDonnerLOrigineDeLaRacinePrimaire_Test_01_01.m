@@ -1,0 +1,5 @@
+
+clear
+clc
+
+[PourcentageOrigineMini PourcentageVariationOrigineMini, DiametreMaxRacinePrimaire, DiametreMinRacinePrimaire] = FonctionLireParametresFichierConf_racine_primaire()

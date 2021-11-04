@@ -1,0 +1,3 @@
+200; NbLignes
+200; NbColonnes
+10; NbImages
