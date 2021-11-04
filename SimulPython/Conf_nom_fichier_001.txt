@@ -1,0 +1,6 @@
+Conf_image_001.csv
+Conf_nodule_001.csv
+Conf_numero_maxi_fichier.csv
+Conf_racine_primaire_001.csv
+Conf_racine_secondaire_001.csv
+Conf_segment_001.csv
