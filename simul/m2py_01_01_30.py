@@ -6,7 +6,7 @@ import datetime
 import time
 
 # nom fichier #
-FI_LECTURE = "exo_08_06_01.m"
+FI_LECTURE = "FonctionTracerUnSegment.m"
 # nom fichier #
 
 print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
