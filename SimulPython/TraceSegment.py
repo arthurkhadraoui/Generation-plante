@@ -1,58 +1,71 @@
-
-
-def TraceSegment(Matrice,MatricLog,x1,x2,y1,y2):
-
-    dx=x2-x1;
-    dy=y2-y1;
-    e1=dx;
-    e2=dy;
-    if (dx)!=0:
-        if (dx)>0:
-            if (dy) != 0:
-                if (dy) > 0:
-                    if(dx)>=(dy):
-                        dx*=2;
-                        dy*=2;
-                        while (x1+1!=x2):
+def TraceSegment(Matrice, MatricLog, x1, x2, y1, y2):
+    dx = x2 - x1;
+    dy = y2 - y1;
+    if dx!=0:
+        if dx>0:
+            if dy!=0:
+                if dy>0:
+                    if dx>=dy:
+                        e=dx
+                        dx*=2
+                        dy*+2
+                        while(True):
                             if y1==0:
-                                y1=1;
-                            Matrice[x1][y1]=1;
-                            if(dx-dy)<0:
-                                y1+=1;
-                                e1+=dx;
+                                y1=1
+                            Matrice[x1][y1]=1
+                            x1+=1
+                            if x1==x2:
+                                break
+                            e=e-dy
+                            if e<0:
+                                y1+=1
+                                e+=dx
                     else:
-                        dy*=2;
-                        dx*=2;
-                        while (y1+1!=y2):
+                        e=dy
+                        dy*=2
+                        dx*=2
+                        while(True):
                             if y1==0:
-                                y1=1;
-                            Matrice[x1][y1]=1;
-                            if(dy-dx)<0:
-                                x1+=1;
-                                e2+=dy;
-                elif dy < 0 and dx > 0:
-                    if (dx) >= -(dy):
-                        dx *= 2;
-                        dy *= 2;
-                        while (x1 + 1 != x2):
-                            if y1 == 0:
-                                y1 = 1;
-                            Matrice[x1][y1] = 1;
-                            if (dx - dy) < 0:
-                                y1 -= 1;
-                                e1 += dx;
+                                y1=1
+                            Matrice[x1][y1]=1
+                            y1+=1
+                            if y1==y2:
+                                break
+                            e-=dx
+                            if e<0:
+                                x1+=1
+                                e+=dy
+                elif dy<0 and dx>0:
+                    if dx >= -dy:
+                        e=dx
+                        dx*=2
+                        dy*=2
+                        while True:
+                            if y1==0:
+                                y1=1
+                            Matrice[x1][y1]=1
+                            x1+=1
+                            if x1==x2:
+                                break
+                            e+=dy
+                            if e<0:
+                                y1-=1
+                                e+=dx
                     else:
-                        dy *= 2;
-                        dx *= 2;
-                        while (y1 + 1 != y2):
-                            if y1 == 0:
-                                y1 = 1;
-                            Matrice[x1][y1] = 1;
-                            if (dy - dx) < 0:
-                                x1 += 1;
-                                e2 += dy;
-
-
+                        e=dy
+                        dy*=2
+                        dx*=2
+                        while True:
+                            if y1==0:
+                                y1=1
+                            Matrice[x1][y1]
+                            y1-=1
+                            if y1==y2:
+                                break
+                            e = e+dx
+                            if e>0:
+                                x1+=1
+                                e+=dy
 
 
 
