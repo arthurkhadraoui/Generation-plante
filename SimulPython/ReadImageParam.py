@@ -6,6 +6,6 @@ def ReadImageParam():
               newline='') as csvfile:
         params = csv.reader(csvfile, delimiter=';', quotechar='|')
         for row in params:
-            paramimg.append(row[0])
+            paramimg.append(int(row[0]))
     return paramimg[0],paramimg[1],paramimg[2]
 

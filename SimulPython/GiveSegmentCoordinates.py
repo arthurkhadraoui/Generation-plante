@@ -9,4 +9,4 @@ def GiveSegmentCoordinates(LigneO,ColonneO):
     angleRad = GiveAngle()[0]
     angleDeg = GiveAngle()[1]
 
-    return round(np.cos(GiveAngle(0))*GiveSegmentLength())+LigneO, round(np.sin(GiveAngle(0))*GiveSegmentLength())+ColonneO,angleRad,segLength,angleDeg
+    return round(np.cos(GiveAngle()[0])*GiveSegmentLength())+LigneO, round(np.sin(GiveAngle()[0])*GiveSegmentLength())+ColonneO,angleRad,segLength,angleDeg

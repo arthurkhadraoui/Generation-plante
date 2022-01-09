@@ -6,5 +6,5 @@ def ReadSegmentParam():
               newline='') as csvfile:
         params = csv.reader(csvfile, delimiter=';', quotechar='|')
         for row in params:
-            paramseg.append(row[0])
+            paramseg.append(float(row[0]))
     return paramseg[0],paramseg[1],paramseg[2],paramseg[3]
