@@ -16,7 +16,7 @@ DebutTraitement = datestr(LeTemps)
 %TypeSvg = 1; % image
 %TypeSvg = 2; % csv
 
-TypeSvg = 1
+TypeSvg = 0
 
 if TypeSvg == 0 % all
     TempsDetraitementUnitaire = 1.5896;
