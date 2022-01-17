@@ -37,8 +37,7 @@ for i = 1 : LeNbDeNodules
     Centre_Colonne = round((Diametre_Min_Colonne_1 + Diametre_Min_Colonne_2)/ 2);
     %disp([num2str(i),' : ', '05'])
 
-    DecalageLigne = 0;
-    DecalageColonne = 0;
+    
     %disp([num2str(i),' : ', '06'])
 
     [LaMatrice LaMatriceLogNodules] = FonctionTracerUnNodule(Diametre, Centre_Ligne, Centre_Colonne, LaMatrice, Angle, DecalageLigne, DecalageColonne);

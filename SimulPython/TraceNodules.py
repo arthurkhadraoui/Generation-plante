@@ -7,9 +7,9 @@ from TraceNodule import TraceNodule
 
 def TraceNodules(Matrice, MatriceLog,nbNodules):
     for i in range(nbNodules):
-        diametre = 12 + round(random() *4)
+        diametre = 70 + round(random() *4)
         longueurNodule = round((2.8 * diametre)/2)
-        indiceLigne = 100 + i*40
+        indiceLigne = 500 + round(i*random()*1000)
         AxeLigne1 = MatriceLog[indiceLigne][0]
         AxeColonne = MatriceLog[indiceLigne][1]
         DiamColonne = MatriceLog[indiceLigne][2]
@@ -26,8 +26,8 @@ def TraceNodules(Matrice, MatriceLog,nbNodules):
         angle = np.arctan(tangentAdj)
         angleDegre = angle * 180/np.pi
 
-        centreLigne = round((AxeLigne1+AxeColonne2)/2)
-        centreColonne = round((DiamColonne+DiamMinColonne2)/2)
+        centreLigne = round(AxeLigne1)
+        centreColonne = round(AxeColonne)
 
         DecalageLigne = 0
         DecalageColonne = 0
@@ -36,9 +36,10 @@ def TraceNodules(Matrice, MatriceLog,nbNodules):
 
         DecalageLigne = 5
         DecalageColonne = round(diametre * 0.8)
+        print('nodule tracé')
 
         Matrice, MatriceLogNodules1 = TraceNodule(diametre, centreLigne, centreColonne, Matrice, angle, DecalageLigne, DecalageColonne)
 
         MatriceLogNodules = np.append(MatriceLogNodules,MatriceLogNodules1)
 
-        return Matrice,MatriceLogNodules
+    return Matrice,MatriceLogNodules

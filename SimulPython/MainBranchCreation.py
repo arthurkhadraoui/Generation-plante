@@ -10,5 +10,5 @@ imageparam = ReadImageParam()
 
 Matrice,MatriceLog=GiveRoot()
 Matrice,MatriceLog=GiveRootDiametre(Matrice,MatriceLog)
-Matrice, MatriceLogNodules = TraceNodules(Matrice,MatriceLog,20)
+Matrice, MatriceLogNodules = TraceNodules(Matrice,MatriceLog,10)
 export(Matrice,MatriceLog)
