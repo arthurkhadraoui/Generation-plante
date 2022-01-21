@@ -10,8 +10,10 @@ from TraceNodules import TraceNodules
 imageparam = ReadImageParam()
 
 Matrice,MatriceLog=GiveRoot()
-Matrice = TraceSecRoots(Matrice,MatriceLog, 10)
+
 Matrice,MatriceLog=GiveRootDiametre(Matrice,MatriceLog)
 Matrice, MatriceLogNodules = TraceNodules(Matrice,MatriceLog,15)
+
+Matrice = TraceSecRoots(Matrice,MatriceLog, 10)
 
 export(Matrice,MatriceLog)

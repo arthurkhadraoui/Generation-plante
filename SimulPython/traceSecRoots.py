@@ -4,7 +4,7 @@ import numpy as np
 
 from GiveSecAxis import GiveSecAxis
 from ReadImageParam import ReadImageParam
-
+from GiveSecRootDiametre import GiveRootSecDiametre
 
 def TraceSecRoots(Matrice, MatriceLog, nbRacinesSec):
     tailleimage = ReadImageParam()[0]
@@ -16,8 +16,9 @@ def TraceSecRoots(Matrice, MatriceLog, nbRacinesSec):
 
             AxeLigne1 = int(MatriceLog[indiceLigne][0])
             AxeColonne = int(MatriceLog[indiceLigne][1])
+            largeur = MatriceLog[indiceLigne][3]-MatriceLog[indiceLigne][2]
 
-            Matrice = GiveSecAxis(AxeLigne1,AxeColonne,Matrice,MatriceLog)
-
+            Matrice,MatriceLogSec = GiveSecAxis(AxeLigne1,AxeColonne,Matrice,MatriceLog)
+            Matrice = GiveRootSecDiametre(Matrice,MatriceLogSec,largeur)
 
     return Matrice
