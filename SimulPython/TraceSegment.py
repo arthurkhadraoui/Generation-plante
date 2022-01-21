@@ -99,7 +99,7 @@ def TraceSegment(Matrice, MatriceLog, x1, y1, x2, y2):
                         while True:
                             if y1 == 0:
                                 y1 = 1
-                            Matrice[x1][y1] = 1
+                            Matrice[x1][y1] = 255
                             MatriceLog = np.append(MatriceLog, [[x1, y1]], axis=0)
                             y1 += 1
                             if y1 == y2:
@@ -116,7 +116,7 @@ def TraceSegment(Matrice, MatriceLog, x1, y1, x2, y2):
                         while True:
                             if y1 == 0:
                                 y1 = 1
-                            Matrice[x1][y1] = 1
+                            Matrice[x1][y1] = 255
                             MatriceLog = np.append(MatriceLog, [[x1, y1]], axis=0)
                             x1 -= 1
                             if x1 == x2:
@@ -132,7 +132,7 @@ def TraceSegment(Matrice, MatriceLog, x1, y1, x2, y2):
                         while True:
                             if y1 == 0:
                                 y1 = 1
-                            Matrice[x1][y1] = 1
+                            Matrice[x1][y1] = 255
                             MatriceLog = np.append(MatriceLog, [[x1, y1]], axis=0)
                             y1 -= 1
                             if y1 == y2:
@@ -145,7 +145,7 @@ def TraceSegment(Matrice, MatriceLog, x1, y1, x2, y2):
                 while True:
                     if y1 == 0:
                         y1 = 1
-                    Matrice[x1][y1] = 1
+                    Matrice[x1][y1] = 255
                     MatriceLog = np.append(MatriceLog, [[x1, y1]], axis=0)
                     x1 -= 1
                     if x1 == x2:
@@ -156,7 +156,7 @@ def TraceSegment(Matrice, MatriceLog, x1, y1, x2, y2):
                     while True:
                         if y1 == 0:
                             y1 = 1
-                        Matrice[x1][y1] = 1
+                        Matrice[x1][y1] = 255
                         MatriceLog = np.append(MatriceLog, [[x1, y1]], axis=0)
                         y1 += 1
                         if y1 == y2:
@@ -165,7 +165,7 @@ def TraceSegment(Matrice, MatriceLog, x1, y1, x2, y2):
                     while True:
                         if y1 == 0:
                             y1 = 1
-                        Matrice[x1][y1] = 1
+                        Matrice[x1][y1] = 255
                         MatriceLog = np.append(MatriceLog, [[x1, y1]], axis=0)
                         y1 -= 1
                         if y1 == y2:
