@@ -5,12 +5,14 @@ import numpy as np
 from GiveSecAxis import GiveSecAxis
 from ReadImageParam import ReadImageParam
 from GiveSecRootDiametre import GiveRootSecDiametre
+from ReadSecRootsParam import ReadSecRootsParam
+
 
 def TraceSecRoots(Matrice, MatriceLog, nbRacinesSec):
     tailleimage = ReadImageParam()[0]
+    nbRacines, longueurMaxi, diametreMin, inclinaison = ReadSecRootsParam()
 
-
-    for i in range(nbRacinesSec):
+    for i in range(nbRacines+1):
         indiceLigne = 1000 + round(i * random() * 1500)
         if indiceLigne<tailleimage:
 

@@ -2,11 +2,15 @@ import random
 import numpy as np
 
 from ReadRootParam import ReadRootParam
+from ReadSecRootsParam import ReadSecRootsParam
+
+
 def GiveRootSecDiametre(Matrice,MatriceLog,largeurRacine):
+    nbRacines, longueurMaxi, diametreMin, inclinaison = ReadSecRootsParam()
     LongueurRacine =len(MatriceLog)
     #VariationDiametre = round(random.random()*2)
     LargeurDebutRacine = largeurRacine
-    LargeurFinRacine = 1
+    LargeurFinRacine = diametreMin
     LigneorigineRacine = MatriceLog[0][0]
     ColonneorigineRacine = MatriceLog[0][1]
     b=LargeurDebutRacine

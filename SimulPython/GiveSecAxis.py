@@ -2,7 +2,7 @@ from random import random
 
 from ReadImageParam import ReadImageParam
 from ReadSegmentParam import ReadSegmentParam
-
+from ReadSecRootsParam import ReadSecRootsParam
 from GiveSecSegmentCoordinates import GiveSecSegmentCoordinates
 from TraceSegment import TraceSegment
 import numpy as np
@@ -10,11 +10,10 @@ import numpy as np
 def GiveSecAxis(x1,y1,Matrice,MatriceLog):
     imageParam = ReadImageParam()
     segmentParam = ReadSegmentParam()
-
+    nbRacines,longueurMaxi,diametreMin,Inclinaison = ReadSecRootsParam()
     MatriceLogSec = [[0, 0]];
-    margin = 0.01
 
-    maxlgth = round((segmentParam[1]-((1-(segmentParam[1]-margin))*random()))*imageParam[0])
+    maxlgth = longueurMaxi
     randside = random()
     if randside < 0.5:
         randside = -1
@@ -26,7 +25,7 @@ def GiveSecAxis(x1,y1,Matrice,MatriceLog):
 
         (x2,y2,angleRad,segLength,angleDeg) = GiveSecSegmentCoordinates(x1,y1)
         y2=y1+randside*(y1-y2)
-        (Matrice,MatriceLogSec,x1Fin,y1Fin) = TraceSegment(Matrice,MatriceLogSec,x1,y1,x2+3,y2)
+        (Matrice,MatriceLogSec,x1Fin,y1Fin) = TraceSegment(Matrice,MatriceLogSec,x1,y1,x2+Inclinaison,y2)
 
         x1=x1Fin
         y1=y1Fin
