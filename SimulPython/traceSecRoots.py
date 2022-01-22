@@ -1,4 +1,4 @@
-from random import random
+from random import random, randint
 
 import numpy as np
 
@@ -8,12 +8,12 @@ from GiveSecRootDiametre import GiveRootSecDiametre
 from ReadSecRootsParam import ReadSecRootsParam
 
 
-def TraceSecRoots(Matrice, MatriceLog, nbRacinesSec):
+def TraceSecRoots(Matrice, MatriceLog):
     tailleimage = ReadImageParam()[0]
     nbRacines, longueurMaxi, diametreMin, inclinaison = ReadSecRootsParam()
-
-    for i in range(nbRacines+1):
-        indiceLigne = 1000 + round(i * random() * 1500)
+    longueurRacinePrincipale = len(MatriceLog)
+    for i in range(nbRacines):
+        indiceLigne = 1000 + randint(0,longueurRacinePrincipale-1000)
         if indiceLigne<tailleimage:
 
             AxeLigne1 = int(MatriceLog[indiceLigne][0])

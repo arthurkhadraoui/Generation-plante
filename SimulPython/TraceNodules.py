@@ -1,4 +1,4 @@
-from random import random
+from random import random, randint
 
 import numpy as np
 
@@ -12,7 +12,8 @@ def TraceNodules(Matrice, MatriceLog, nbNodules):
 
 
     for i in range(nbNodules):
-        indiceLigne = 500 + round(i * random() * 1000)
+        longueurRacinePrincipale = len(MatriceLog)
+        indiceLigne = 1000 + randint(0,longueurRacinePrincipale-1000)
         if indiceLigne<tailleimage:
             diametre = 30 + round(random() * 4)
             longueurNodule = round((2.8 * diametre) / 2)

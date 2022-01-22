@@ -8,13 +8,12 @@ from TraceNodules import TraceNodules
 
 def MainBranch():
 
-    imageparam = ReadImageParam()
 
     Matrice,MatriceLog=GiveRoot()
 
     Matrice,MatriceLog=GiveRootDiametre(Matrice,MatriceLog)
     Matrice, MatriceLogNodules = TraceNodules(Matrice,MatriceLog,15)
 
-    Matrice = TraceSecRoots(Matrice,MatriceLog, 10)
+    Matrice = TraceSecRoots(Matrice,MatriceLog)
     return Matrice,MatriceLog
 
